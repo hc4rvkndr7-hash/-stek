@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>İstek</title>
+<style>
+body{
+    margin:0;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    background:#f2f2f2;
+    font-family:Arial,sans-serif;
+}
+.kutu{
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 0 15px rgba(0,0,0,.2);
+    text-align:center;
+    width:350px;
+}
+button{
+    padding:12px 25px;
+    border:none;
+    border-radius:8px;
+    font-size:18px;
+    color:white;
+    cursor:pointer;
+    margin:10px;
+}
+#reddet{
+    background:#e53935;
+}
+#kabul{
+    background:#43a047;
+}
+#sonuc{
+    margin-top:20px;
+    font-size:24px;
+    font-weight:bold;
+}
+</style>
+</head>
+<body>
+
+<div class="kutu">
+    <h2>Ömer Bey Beren Hanım'ın sapığı olmak istiyor, istek gönderildi.</h2>
+
+    <button id="reddet">Reddet</button>
+    <button id="kabul">Kabul Et</button>
+
+    <div id="sonuc"></div>
+</div>
+
+<script>
+const reddet = document.getElementById("reddet");
+const kabul = document.getElementById("kabul");
+const sonuc = document.getElementById("sonuc");
+
+reddet.onclick = () => {
+    reddet.remove();
+};
+
+kabul.onclick = () => {
+    sonuc.innerHTML = "😄<br><br>Ömer Bey Beren Hanım'ın sapığıdır.";
+    kabul.remove();
+};
+</script>
+
+</body>
+	</html>
