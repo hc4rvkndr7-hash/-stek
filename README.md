@@ -1,1 +1,1 @@
-# -stek
+# istek
